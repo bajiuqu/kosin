@@ -17,8 +17,3 @@ nacos:
 
 logging:
   config: classpath:log/logback-spring.xml
-  file:
-    path: F:/java/kosin/log
-    name: kosin.log
-  level:
-    com.bajiuqu.nacos.dao: DEBUG
