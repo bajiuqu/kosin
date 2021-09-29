@@ -1,0 +1,49 @@
+server:
+  port: 8009
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/timo?characterEncoding=utf-8&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/**
+    servlet:
+      content-type: text/html # Content-Type 的值
+    enabled: true # 启用MVC Thymeleaf视图分辨率
+    mode: HTML # 应用于模板的模板模式。另请参见StandardTemplateModeHandlers。
+    encoding: UTF-8 # 模板编码
+    suffix: .html # 构建URL时附加到查看名称的后缀
+    check-template-location: true  # 检查模板位置是否存在。
+    cache: false # 模板缓存，开发阶段要使用false
+  redis:
+#    host: 39.102.84.183
+#    password: iW@6h6aHF
+#    port: 6379
+#    timeout: 3000 # 连接超时时间
+    # 线程池配置
+#    lettuce:
+#      pool:
+#        max-active: 8 # 使用负值|表示没有限制，默认是 8
+#        max-wait: -1 # 连接池最大阻塞等待时间(使用负值表示没有限制)，默认 -1
+#        max-idle: 8 # 最大空闲连接，默认 8
+#        min-idle: 0 # 最小空闲连接，默认 0
+
+
+logging:
+  config: classpath:log/logback-spring.xml
+
+mybatis:
+  mapper-locations: classpath:mappers/**/*Mapper.xml
+  configuration:
+    typeAliasesPackage: com.bajiuqu.manage.**.dao
+    map-underscore-to-camel-case: true
+
+pagehelper:
+  helper-dialect: mysql
+  params:
+    count: countSql
+  reasonable: true
+  support-methods-arguments: true
