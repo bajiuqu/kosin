@@ -1,0 +1,15 @@
+server:
+  port: 7079
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gateway
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+logging:
+  config: classpath:log/logback-spring.xml

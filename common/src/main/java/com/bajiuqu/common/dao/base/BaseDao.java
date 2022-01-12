@@ -1,4 +1,4 @@
-package com.bajiuqu.manage.base.dao;
+package com.bajiuqu.common.dao.base;
 
 import java.util.List;
 

@@ -1,9 +1,11 @@
 server:
-  port: 7099
+  port: 7089
 
 spring:
   profiles:
     active: dev
+  application:
+    name: nacos
   jpa:
     show-sql: true
     hibernate:

@@ -13,5 +13,4 @@ import java.io.Serializable;
 @ToString
 public class BaseDO implements Serializable {
 
-
 }

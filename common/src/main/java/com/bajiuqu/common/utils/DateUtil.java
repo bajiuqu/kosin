@@ -1,9 +1,14 @@
-package com.bajiuqu.manage.tools;
+package com.bajiuqu.common.utils;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/**
+ * 全局时间处理类
+ *
+ * @author 小艺小艺
+ */
 public class DateUtil {
 
     /**
@@ -159,9 +164,8 @@ public class DateUtil {
     public static long dateInterval(Date startInclusive, Date endExclusive) {
         LocalDateTime localDateTimeStart = dateToLocalDateTime(startInclusive);
         LocalDateTime localDateTimeEnd = dateToLocalDateTime(endExclusive);
-        Duration between = Duration.between(localDateTimeStart, localDateTimeEnd);
-        long l = between.toDays();
-        return l;
+        long between = Duration.between(localDateTimeStart, localDateTimeEnd).toDays();
+        return between;
     }
 
 }
