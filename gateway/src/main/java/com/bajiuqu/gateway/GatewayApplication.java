@@ -9,6 +9,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  * 服务网关
  *
  * @author 小艺小艺
+ * @deprecated  @RefreshScope 配置、实例热加载
+ * @deprecated @EnableDiscoveryClient 开启服务发现
  */
 @RefreshScope
 @EnableDiscoveryClient

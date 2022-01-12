@@ -6,10 +6,6 @@ spring:
     active: dev
   application:
     name: gateway
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
 
 logging:
   config: classpath:log/logback-spring.xml

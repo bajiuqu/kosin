@@ -32,7 +32,12 @@
         <pagehelper.version>1.4.1</pagehelper.version>
         <nacos.config.version>2.1.0.RELEASE</nacos.config.version>
         <nacos.discovery.version>2.1.0.RELEASE</nacos.discovery.version>
+        <openfeign.version>2.1.0.RELEASE</openfeign.version>
+        <sentinel.version>2.1.0.RELEASE</sentinel.version>
+        <gateway.version>2.1.0.RELEASE</gateway.version>
         <nacos.client>1.2.0</nacos.client>
+        <swagger.ui.version>2.8.0</swagger.ui.version>
+        <swagger2.version>2.8.0</swagger2.version>
     </properties>
 
     <dependencyManagement>
@@ -111,7 +116,7 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${nacos.config.version}</version>
             </dependency>
-            <!-- nacos 服务注册中心 -->
+            <!-- nacos 服务发信啊-注册中心 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -122,6 +127,34 @@
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>nacos-client</artifactId>
                 <version>${nacos.client}</version>
+            </dependency>
+            <!-- 服务调用 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${openfeign.version}</version>
+            </dependency>
+            <!-- 降级熔断 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${sentinel.version}</version>
+            </dependency>
+            <!-- gateway 网关 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.ui.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
