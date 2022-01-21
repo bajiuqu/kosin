@@ -8,11 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Entity
-@Table(name = "yf_fq_users")
 public class UserDO extends BaseDO {
 
-    @Id
-    private Integer fuId;
 
 }

@@ -14,7 +14,7 @@ public class GatewayConfig {
 
     //访问IP白名单
     private static final String[] whitAddress = {
-            "39.105.132.152", "192.168.1.8"
+            "39.105.132.152"
     };
 
     @Bean

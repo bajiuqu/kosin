@@ -40,6 +40,13 @@
         <swagger2.version>2.8.0</swagger2.version>
     </properties>
 
+    <!-- 每次添加新模块要注意添加module -->
+    <modules>
+        <module>manager</module>
+        <module>common</module>
+        <module>gateway</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -162,13 +169,5 @@
     <build>
         <finalName>kosin</finalName>
     </build>
-
-    <!-- 每次添加新模块要注意添加module -->
-    <modules>
-        <module>manage-server</module>
-        <module>nacos</module>
-        <module>common</module>
-        <module>gateway</module>
-    </modules>
 
 </project>

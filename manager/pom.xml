@@ -9,7 +9,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>manage-server</artifactId>
+    <artifactId>manager-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -145,7 +145,7 @@
                 </includes>
             </resource>
         </resources>
-        <finalName>kosin-manage-server</finalName>
+        <finalName>manager-server</finalName>
     </build>
 
 </project>

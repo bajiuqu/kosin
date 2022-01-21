@@ -16,7 +16,7 @@
 
     <!-- win 本机环境 -->
     <springProfile name = "dev">
-        <property name="log.path" value="./logFile/"/>
+        <property name="log.path" value="./logFile/gateway/"/>
     </springProfile>
     <!-- Mac 本机环境 -->
     <!--    <springProfile name="dev">-->
@@ -25,12 +25,12 @@
 
     <!-- 测试环境 -->
     <springProfile name = "test">
-        <property name="log.path" value="/home/kosin-log/gateway/"/>
+        <property name="log.path" value="./logs/"/>
     </springProfile>
 
     <!-- 生产环境 -->
     <springProfile name = "prod">
-        <property name="log.path" value="/home/kosin-log/gateway/"/>
+        <property name="log.path" value="./logs/"/>
     </springProfile>
 
     <!-- 彩色日志 -->
@@ -63,7 +63,7 @@
         <!-- 日志记录器的滚动策略，按日期、大小记录 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 文件路径,定义了日志的切分方式 == 把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间 -->
-            <fileNamePattern>${log.path}/${log.name}.%d{yyyy-MM-dd}.%i.tar.gz</fileNamePattern>
+            <fileNamePattern>${log.path}/${log.name}.%d{yyyy-MM-dd}.%i.zip</fileNamePattern>
             <!--日志文件保留天数-->
             <maxHistory>15</maxHistory>
             <!-- 文件最大规格 -->
@@ -143,7 +143,7 @@
         level:用来设置打印级别: TRACE、DEBUG、INFO、WARN、ERROR、ALL、OFF, 不能设置为INHERITED或者同义词NULL。默认是DEBUG
         可以包含零个或多个元素，标识这个 appender 将会添加到这个 logger。
     -->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="LOG_FILE"/>
     </root>

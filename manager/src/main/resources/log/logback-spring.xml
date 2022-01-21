@@ -10,13 +10,13 @@
 
     <!-- 定义变量值的标签 -->
     <!-- name的值是变量的名称，value的值时变量定义的值。通过定义的值会被插入到logger上下文中。定义变量后，可以使 ${} 来使用变量。 -->
-    <property name="log.name" value="kosin-manage"/>
+    <property name="log.name" value="manager"/>
 
     <!-- 通过 spring.profiles.active=dev 来指定环境 -->
 
     <!-- win 本机环境 -->
     <springProfile name = "dev">
-        <property name="log.path" value="./logFile/"/>
+        <property name="log.path" value="./logFile/manage/"/>
     </springProfile>
     <!-- Mac 本机环境 -->
     <!--    <springProfile name="dev">-->
@@ -25,12 +25,12 @@
 
     <!-- 测试环境 -->
     <springProfile name = "test">
-        <property name="log.path" value="/home/kosin-log/manage/"/>
+        <property name="log.path" value="./logs/"/>
     </springProfile>
 
     <!-- 生产环境 -->
     <springProfile name = "prod">
-        <property name="log.path" value="/home/kosin-log/manage/"/>
+        <property name="log.path" value="./logs/"/>
     </springProfile>
 
     <!-- 彩色日志 -->
@@ -143,7 +143,7 @@
         level:用来设置打印级别: TRACE、DEBUG、INFO、WARN、ERROR、ALL、OFF, 不能设置为INHERITED或者同义词NULL。默认是DEBUG
         可以包含零个或多个元素，标识这个 appender 将会添加到这个 logger。
     -->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="LOG_FILE"/>
     </root>
