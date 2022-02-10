@@ -19,3 +19,8 @@ spring:
         namespace: test
         metadata:
           version: v1
+
+manager:
+  domainName: axuu.cn
+  filePath: /home/app/deploy/file.axuu.cn
+  email: ruiminwang@163.com

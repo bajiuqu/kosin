@@ -8,4 +8,4 @@ spring:
     name: gateway
 
 logging:
-  config: classpath:log/logback-spring.xml
+  config: classpath:config/log/logback-spring.xml

@@ -38,6 +38,10 @@
         <nacos.client>1.2.0</nacos.client>
         <swagger.ui.version>2.8.0</swagger.ui.version>
         <swagger2.version>2.8.0</swagger2.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <fastjson.version>1.2.38</fastjson.version>
+        <jackson.version>2.9.7</jackson.version>
+        <tk.mybatis.version>2.1.5</tk.mybatis.version>
     </properties>
 
     <!-- 每次添加新模块要注意添加module -->
@@ -64,10 +68,31 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/tk.mybatis/mapper-spring-boot-starter -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tk.mybatis.version}</version>
+            </dependency>
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>

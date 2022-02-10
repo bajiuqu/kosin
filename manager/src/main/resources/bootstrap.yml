@@ -1,15 +1,8 @@
-server:
-  port: 7099
-
 spring:
   profiles:
     active: dev
   application:
     name: manager-server
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
 
 logging:
-  config: classpath:log/logback-spring.xml
+  config: classpath:config/log/logback-spring.xml

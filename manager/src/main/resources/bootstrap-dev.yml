@@ -19,3 +19,8 @@ spring:
         namespace: dev
         metadata:
           version: v1
+
+manager:
+  domainName: WRM
+  filePath: F:\kosin\file.axuu.cn
+  email: ruiminwang@163.com
