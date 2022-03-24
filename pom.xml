@@ -42,13 +42,15 @@
         <fastjson.version>1.2.38</fastjson.version>
         <jackson.version>2.9.7</jackson.version>
         <tk.mybatis.version>2.1.5</tk.mybatis.version>
+        <flowable.version>6.4.1</flowable.version>
     </properties>
 
     <!-- 每次添加新模块要注意添加module -->
     <modules>
-        <module>manager</module>
-        <module>common</module>
-        <module>gateway</module>
+        <module>kosin-common</module>
+        <module>kosin-gateway</module>
+        <module>kosin-service</module>
+        <module>kosin-service-api</module>
     </modules>
 
     <dependencyManagement>
@@ -187,6 +189,61 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.ui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-spring-boot-starter</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-ui-modeler-conf</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-ui-modeler-rest</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-ui-modeler-logic</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-spring-boot-starter-process</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-idm-spring-configurator</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <!-- 兼容V5配置 -->
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable5-spring-compatibility</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <!--json解析器 -->
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-json-converter</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-ui-common</artifactId>
+                <version>${flowable.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-rest</artifactId>
+                <version>${flowable.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
