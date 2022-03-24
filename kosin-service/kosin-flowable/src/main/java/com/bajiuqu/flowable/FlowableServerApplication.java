@@ -11,6 +11,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 public class FlowableServerApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(FlowableServerApplication.class, args);
     }
 
