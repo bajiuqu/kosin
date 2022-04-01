@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: data-dict-server
+
+logging:
+  config: classpath:config/log/logback-spring.xml

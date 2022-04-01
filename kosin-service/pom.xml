@@ -16,6 +16,7 @@
     <modules>
         <module>kosin-manager</module>
         <module>kosin-flowable</module>
+        <module>kosin-data-dict</module>
     </modules>
 
 </project>

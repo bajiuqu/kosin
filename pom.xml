@@ -21,7 +21,7 @@
         <project.build.locales>zh_CN</project.build.locales>
         <logback.version>1.2.3</logback.version>
         <druid.version>1.1.10</druid.version>
-        <hutool.version>5.7.18</hutool.version>
+        <hutool.version>5.3.7</hutool.version>
         <guava.version>30.1.1-jre</guava.version>
         <devtools.version>2.1.0.RELEASE</devtools.version>
         <starter.web.version>2.1.0.RELEASE</starter.web.version>
@@ -40,9 +40,15 @@
         <swagger2.version>2.8.0</swagger2.version>
         <slf4j.version>1.7.30</slf4j.version>
         <fastjson.version>1.2.38</fastjson.version>
-        <jackson.version>2.9.7</jackson.version>
+        <jackson.version>2.9.6</jackson.version>
         <tk.mybatis.version>2.1.5</tk.mybatis.version>
         <flowable.version>6.4.1</flowable.version>
+        <spring-boot-data-jpa>2.1.0.RELEASE</spring-boot-data-jpa>
+        <spring-boot-data-redis>2.1.0.RELEASE</spring-boot-data-redis>
+        <validator.version>6.0.13.Final</validator.version>
+        <commons-pool2.version>2.6.2</commons-pool2.version>
+        <jackson-databind.version>2.9.7</jackson-databind.version>
+        <commons-lang3.version>3.7</commons-lang3.version>
     </properties>
 
     <!-- 每次添加新模块要注意添加module -->
@@ -239,11 +245,47 @@
                 <artifactId>flowable-ui-common</artifactId>
                 <version>${flowable.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.flowable</groupId>
                 <artifactId>flowable-rest</artifactId>
                 <version>${flowable.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot-data-jpa}</version>
+                <exclusions>
+                    <!-- 排除javassist-->
+                    <exclusion>
+                        <groupId>javassist</groupId>
+                        <artifactId>javassist</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-data-redis}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${validator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons-pool2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
