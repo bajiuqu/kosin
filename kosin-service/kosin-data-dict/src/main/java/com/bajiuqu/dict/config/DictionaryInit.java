@@ -45,6 +45,13 @@ public class DictionaryInit {
 
                 List<DictionarysDO> dictList = entry.getValue();
 
+                Object value = redisTemplate.opsForValue().get(RedisConstant.GROUP_REDIS_KEY_PRE + groupId);
+
+                if (value != null) {
+
+                    redisTemplate.delete(RedisConstant.GROUP_REDIS_KEY_PRE + groupId);
+                }
+
                 Map<String, String> entity = new HashMap<>();
 
                 for (DictionarysDO item : dictList) {
@@ -53,10 +60,6 @@ public class DictionaryInit {
                 }
 
                 redisTemplate.opsForValue().set(RedisConstant.GROUP_REDIS_KEY_PRE + groupId, JsonUtils.serialize(entity));
-
-                Object value = redisTemplate.opsForValue().get(RedisConstant.GROUP_REDIS_KEY_PRE + groupId);
-
-                System.out.println(value);
             }
         }
     }
