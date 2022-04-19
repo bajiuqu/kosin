@@ -16,11 +16,6 @@ import java.io.Serializable;
 @Configuration
 public class RedisConfig {
 
-    /**
-     * 以字符串的形式存储
-     * @param connectionFactory
-     * @return
-     */
     @Bean
     public RedisTemplate<String, Serializable> redisTemplate(LettuceConnectionFactory connectionFactory) {
         RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
@@ -30,9 +25,6 @@ public class RedisConfig {
         return redisTemplate;
     }
 
-    /**
-     * 以对象的形式存储
-     */
 //    @Bean
 //    public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory factory) {
 //        RedisTemplate<String, Object> template = new RedisTemplate<>();

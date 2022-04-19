@@ -1,4 +1,4 @@
-package com.bajiuqu.dict.repository;
+package com.bajiuqu.dict.dao;
 
 import com.bajiuqu.dict.entity.DictionarysDO;
 import org.springframework.stereotype.Repository;
@@ -11,6 +11,6 @@ import tk.mybatis.mapper.common.Mapper;
  */
 @Repository
 @Transactional(propagation = Propagation.NESTED, rollbackFor = Exception.class)
-public interface DictionaryRepository extends Mapper<DictionarysDO> {
+public interface DictionaryDao extends Mapper<DictionarysDO> {
 
 }

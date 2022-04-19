@@ -3,7 +3,7 @@ package com.bajiuqu.dict.config;
 import com.bajiuqu.common.utils.JsonUtils;
 import com.bajiuqu.dict.constant.RedisConstant;
 import com.bajiuqu.dict.entity.DictionarysDO;
-import com.bajiuqu.dict.repository.DictionaryRepository;
+import com.bajiuqu.dict.dao.DictionaryDao;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -24,7 +24,7 @@ public class DictionaryInit {
     private RedisTemplate redisTemplate;
 
     @Autowired
-    private DictionaryRepository dictRepository;
+    private DictionaryDao dictRepository;
 
     public void init() {
 
