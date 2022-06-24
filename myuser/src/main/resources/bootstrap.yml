@@ -1,0 +1,11 @@
+server:
+  port: 11100
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: myuser
+
+#logging:
+#  config: classpath:config/log/logback-spring.xml
