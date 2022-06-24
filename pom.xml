@@ -53,10 +53,13 @@
 
     <!-- 每次添加新模块要注意添加module -->
     <modules>
-        <module>kosin-common</module>
-        <module>kosin-gateway</module>
-        <module>kosin-service</module>
-        <module>kosin-service-api</module>
+        <module>common</module>
+        <module>gateway</module>
+        <module>service</module>
+        <module>service-api</module>
+        <module>auth</module>
+        <module>data-dict</module>
+        <module>flowable</module>
     </modules>
 
     <dependencyManagement>
