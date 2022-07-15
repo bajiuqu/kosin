@@ -1,8 +1,7 @@
 package com.bajiuqu.manage.system.user.entity;
 
+import com.bajiuqu.common.constant.BaseStatusConstant;
 import com.bajiuqu.common.entity.base.BaseDO;
-import com.bajiuqu.common.utils.UUIDUtil;
-import com.bajiuqu.manage.common.constant.StatusConstant;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -89,7 +88,7 @@ public class UserDO extends BaseDO {
 
     public UserDO() {
         super();
-        this.userStatus = StatusConstant.STATUS_NORMAL;
+        this.userStatus = BaseStatusConstant.STATUS_NORMAL;
     }
 
 }

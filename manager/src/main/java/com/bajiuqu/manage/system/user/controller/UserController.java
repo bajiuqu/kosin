@@ -1,5 +1,6 @@
 package com.bajiuqu.manage.system.user.controller;
 
+import com.bajiuqu.common.vo.ResponseResult;
 import com.bajiuqu.manage.system.user.service.UserService;
 import com.bajiuqu.manage.system.user.vo.UserVO;
 import com.bajiuqu.manage.config.PropertiesConfig;
@@ -29,20 +30,22 @@ public class UserController {
     private UserService userService;
 
     /**
-     *
      * @param userType 0:后天管理用户；1:系统用户
      * @return
      */
     @GetMapping("/getUserAll/{userType}")
-    public UserVO getUserAll(@PathVariable("userType") String userType) {
+    public ResponseResult getUserAll(@PathVariable("userType") String userType) {
         List<UserVO> userVOS = userService.getUserAll(userType);
 
-        return null;
+        return ResponseResult.success();
     }
 
     @GetMapping(value = "/getProperties")
-    public String getProperties() {
-        return propertiesConfig.getDomainName() + "---" + propertiesConfig.getFilePath() + "---" + propertiesConfig.getEmail();
+    public ResponseResult getProperties() {
+
+        return ResponseResult.success(propertiesConfig.getDomainName() + "---" + propertiesConfig.getFilePath() + "---" + propertiesConfig.getEmail());
     }
+
+
 
 }

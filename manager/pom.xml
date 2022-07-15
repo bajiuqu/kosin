@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>com.bajiuqu</groupId>
-        <artifactId>kosin-service</artifactId>
+        <artifactId>kosin</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -113,6 +113,20 @@
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- redis lettuce 连接池依赖包 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.bajiuqu</groupId>
+            <artifactId>kosin-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

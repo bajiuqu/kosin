@@ -9,7 +9,9 @@ spring:
         # Group
         group: DEFAULT_GROUP
         # Data Id 前缀
-        prefix: ${spring.application.name}
+        prefix:
+          - ${spring.application.name}
+          - redis
         # Data Id 后缀
         file-extension: yaml
       discovery:

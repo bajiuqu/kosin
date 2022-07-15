@@ -5,11 +5,15 @@ package com.bajiuqu.common.utils;
  */
 public class CurrentUtil {
 
-    public static String getUserAccount() {
+    public static String getUserName() {
         return null;
     }
 
-    public static String getUserId() {
+    public static String getUserLoginName() {
+        return null;
+    }
+
+    public static String getUserCode() {
         return null;
     }
 

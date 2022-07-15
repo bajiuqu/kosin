@@ -1,4 +1,4 @@
-package com.bajiuqu.dict.config;
+package com.bajiuqu.manage.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

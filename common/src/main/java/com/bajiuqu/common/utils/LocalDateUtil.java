@@ -9,7 +9,7 @@ import java.util.Date;
  *
  * @author 小艺小艺
  */
-public class DateUtil {
+public class LocalDateUtil {
 
     /**
      * 时间格式(yyyy-MM-dd)

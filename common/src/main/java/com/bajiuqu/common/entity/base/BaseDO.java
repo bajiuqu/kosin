@@ -2,7 +2,6 @@ package com.bajiuqu.common.entity.base;
 
 import com.bajiuqu.common.constant.BaseStatusConstant;
 import com.bajiuqu.common.utils.CurrentUtil;
-import com.bajiuqu.common.utils.UUIDUtil;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.Getter;
@@ -62,8 +61,8 @@ public class BaseDO implements Serializable {
         this.status = BaseStatusConstant.STATUS_NORMAL;
         this.createDate = date;
         this.updateDate = date;
-        this.creator = CurrentUtil.getUserAccount();
-        this.creatorCode = CurrentUtil.getUserId();
+        this.creator = CurrentUtil.getUserName();
+        this.creatorCode = CurrentUtil.getUserCode();
     }
 
     /**
@@ -72,8 +71,8 @@ public class BaseDO implements Serializable {
     public void buildUpdateData() {
         Date date = new Date();
         this.updateDate = date;
-        this.refresher = CurrentUtil.getUserAccount();
-        this.refresherCode = CurrentUtil.getUserId();
+        this.refresher = CurrentUtil.getUserName();
+        this.refresherCode = CurrentUtil.getUserCode();
     }
 
 }

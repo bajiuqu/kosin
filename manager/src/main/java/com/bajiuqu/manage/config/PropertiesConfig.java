@@ -1,6 +1,5 @@
 package com.bajiuqu.manage.config;
 
-import com.bajiuqu.manage.system.user.vo.UserVO;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
