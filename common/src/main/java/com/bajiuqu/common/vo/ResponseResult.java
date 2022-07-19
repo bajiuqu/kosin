@@ -102,6 +102,16 @@ public class ResponseResult {
     }
 
     /**
+     * 400 参数错误或数据不完整,缺少必填项,格式错误等等
+     *
+     * @return
+     */
+    public static ResponseResult invalid(String messages) {
+        return new ResponseResult(StatusEnum.ERROR, HttpStatus.HTTP_BAD_REQUEST
+                , messages, "");
+    }
+
+    /**
      * 403 无权限访问的接口,数据或者数据对当前用户是不允许操作
      *
      * @return

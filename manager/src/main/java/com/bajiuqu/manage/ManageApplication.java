@@ -1,10 +1,13 @@
 package com.bajiuqu.manage;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * ksion 后台管理项目
@@ -13,7 +16,8 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  */
 @RefreshScope
 @EnableDiscoveryClient
-@MapperScan("com.bajiuqu.manage.**.dao")
+@MapperScan({"com.bajiuqu.manage.**.dao"})
+@org.mybatis.spring.annotation.MapperScan("com.bajiuqu.manage.**.repository")
 @SpringBootApplication
 public class ManageApplication {
     /**

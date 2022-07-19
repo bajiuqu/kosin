@@ -2,12 +2,14 @@ package com.bajiuqu.common.entity.base;
 
 import com.bajiuqu.common.constant.BaseStatusConstant;
 import com.bajiuqu.common.utils.CurrentUtil;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.Table;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,31 +28,35 @@ import java.util.Date;
 public class BaseDO implements Serializable {
 
     @ApiModelProperty(value = "创建人", notes = "创建人")
-    @Column(name = "CREATOR")
+    @Column(name = "creator")
     private String creator;
 
     @ApiModelProperty(value = "创建人编码", notes = "创建人编码")
-    @Column(name = "CREATOR_CODE")
+    @Column(name = "creator_code")
     private String creatorCode;
 
     @ApiModelProperty(value = "创建时间", notes = "创建时间")
-    @Column(name = "CREATE_DATE")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @Column(name = "create_date")
     private Date createDate;
 
     @ApiModelProperty(value = "更新人", notes = "更新人")
-    @Column(name = "REFRESHER")
+    @Column(name = "refresher")
     private String refresher;
 
     @ApiModelProperty(value = "更新人编码", notes = "更新人编码")
-    @Column(name = "REFRESHER_CODE")
+    @Column(name = "refresher_code")
     private String refresherCode;
 
     @ApiModelProperty(value = "更细时间", notes = "更细时间")
-    @Column(name = "UPDATE_DATE")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @Column(name = "update_date")
     private Date updateDate;
 
     @ApiModelProperty(value = "数据状态", notes = "数据状态")
-    @Column(name = "STATUS")
+    @Column(name = "status")
     private Integer status;
 
     /**

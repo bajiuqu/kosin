@@ -1,6 +1,6 @@
 package com.bajiuqu.manage.system.user.repository;
 
-import com.bajiuqu.manage.system.user.entity.UserDO;
+import com.bajiuqu.manage.common.entity.UserDO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.transaction.annotation.Propagation;

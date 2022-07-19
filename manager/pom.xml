@@ -130,6 +130,14 @@
         </dependency>
     </dependencies>
 
+<!--    <distributionManagement>
+        <repository>
+            <id>private-manager-library-releases</id>
+            <name>private-manager-library-releases</name>
+            <url>http:axuu.cn:80/home/app/deploy/manager-server</url>
+        </repository>
+    </distributionManagement>-->
+
     <build>
         <plugins>
             <plugin>
@@ -146,32 +154,32 @@
                 </configuration>
             </plugin>
         </plugins>
-<!--        <resources>-->
-<!--            <resource>-->
-<!--                <directory>src/main/java</directory>-->
-<!--                <includes>-->
-<!--                    <include>**/*.yml</include>-->
-<!--                    <include>**/*.properties</include>-->
-<!--                    <include>**/*.xml</include>-->
-<!--                </includes>-->
-<!--                <filtering>false</filtering>-->
-<!--            </resource>-->
-<!--            <resource>-->
-<!--                <directory>src/main/resources</directory>-->
-<!--                <includes>-->
-<!--                    <include>**/*.yml</include>-->
-<!--                    <include>**/*.properties</include>-->
-<!--                    <include>**/*.xml</include>-->
-<!--                </includes>-->
-<!--                <filtering>false</filtering>-->
-<!--            </resource>-->
-<!--            <resource>-->
-<!--                <directory>lib</directory>-->
-<!--                <includes>-->
-<!--                    <include>**/*.jar</include>-->
-<!--                </includes>-->
-<!--            </resource>-->
-<!--        </resources>-->
+        <!--        <resources>-->
+        <!--            <resource>-->
+        <!--                <directory>src/main/java</directory>-->
+        <!--                <includes>-->
+        <!--                    <include>**/*.yml</include>-->
+        <!--                    <include>**/*.properties</include>-->
+        <!--                    <include>**/*.xml</include>-->
+        <!--                </includes>-->
+        <!--                <filtering>false</filtering>-->
+        <!--            </resource>-->
+        <!--            <resource>-->
+        <!--                <directory>src/main/resources</directory>-->
+        <!--                <includes>-->
+        <!--                    <include>**/*.yml</include>-->
+        <!--                    <include>**/*.properties</include>-->
+        <!--                    <include>**/*.xml</include>-->
+        <!--                </includes>-->
+        <!--                <filtering>false</filtering>-->
+        <!--            </resource>-->
+        <!--            <resource>-->
+        <!--                <directory>lib</directory>-->
+        <!--                <includes>-->
+        <!--                    <include>**/*.jar</include>-->
+        <!--                </includes>-->
+        <!--            </resource>-->
+        <!--        </resources>-->
         <finalName>kosin-manager-server</finalName>
     </build>
 

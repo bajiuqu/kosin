@@ -1,6 +1,6 @@
 package com.bajiuqu.dict.config;
 
-import com.bajiuqu.common.utils.JsonUtils;
+import com.alibaba.fastjson2.JSON;
 import com.bajiuqu.dict.constant.RedisConstant;
 import com.bajiuqu.dict.entity.DictionarysDO;
 import com.bajiuqu.dict.dao.DictionaryDao;
@@ -59,7 +59,7 @@ public class DictionaryInit {
                     entity.put(item.getDictCode(), item.getDictName());
                 }
 
-                redisTemplate.opsForValue().set(RedisConstant.GROUP_REDIS_KEY_PRE + groupId, JsonUtils.serialize(entity));
+                redisTemplate.opsForValue().set(RedisConstant.GROUP_REDIS_KEY_PRE + groupId, JSON.toJSONString(entity));
             }
         }
     }
