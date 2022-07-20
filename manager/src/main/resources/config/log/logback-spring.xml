@@ -138,7 +138,6 @@
     <logger name="org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener" level="WARN" />
     <logger name="io.lettuce.core.protocol.RedisStateMachine" level="INFO"/>
     <logger name="com.alibaba.nacos.client.naming" level="INFO"/>
-    <logger name="c.a.n.client.config.impl.ClientWorker" level="WARN"/>
 
     <!--
         root节点是必选节点，用来指定最基础的日志输出级别，只有一个level属性

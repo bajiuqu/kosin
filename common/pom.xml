@@ -9,8 +9,10 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kosin-common</artifactId>
+    <artifactId>common</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <name>kosin-common</name>
+    <packaging>jar</packaging>
 
     <dependencies>
 
@@ -56,6 +58,10 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -64,7 +70,7 @@
     </properties>
 
     <build>
-        <finalName>common</finalName>
+        <finalName>kosin-common</finalName>
     </build>
 
 </project>

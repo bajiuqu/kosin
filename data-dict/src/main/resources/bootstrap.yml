@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
   application:
-    name: data-dict-server
+    name: data-dict
 
 logging:
   config: classpath:config/log/logback-spring.xml

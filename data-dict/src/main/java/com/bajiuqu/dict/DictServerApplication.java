@@ -9,7 +9,6 @@ import tk.mybatis.spring.annotation.MapperScan;
 /**
  * @author 小艺小艺
  */
-@MapperScan(value = {"com.bajiuqu.**.dao", "com.bajiuqu.**.repository"})
 @RefreshScope
 @EnableDiscoveryClient
 @SpringBootApplication

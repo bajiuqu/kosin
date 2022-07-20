@@ -10,9 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>kosin-service-api</artifactId>
+    <name>kosin-service-api</name>
     <packaging>pom</packaging>
+
     <modules>
         <module>flowable-api</module>
+        <module>manager-api</module>
+        <module>myuser-api</module>
     </modules>
 
 </project>

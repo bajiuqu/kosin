@@ -7,5 +7,6 @@ spring:
   application:
     name: myuser
 
-#logging:
-#  config: classpath:config/log/logback-spring.xml
+logging:
+  config: classpath:config/log/logback-spring.xml
+

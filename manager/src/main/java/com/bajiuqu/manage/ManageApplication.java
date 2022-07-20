@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -14,11 +15,9 @@ import tk.mybatis.spring.annotation.MapperScan;
  *
  * @author 小艺小艺
  */
-@RefreshScope
+@EnableFeignClients
 @EnableDiscoveryClient
-@MapperScan({"com.bajiuqu.manage.**.dao"})
-@org.mybatis.spring.annotation.MapperScan("com.bajiuqu.manage.**.repository")
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class ManageApplication {
     /**
      * 禁用 Spring Cloud Context，要不然会导致 logback-spring.xml会被加载两次

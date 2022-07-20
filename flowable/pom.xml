@@ -9,9 +9,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kosin-flowable</artifactId>
+    <artifactId>flowable</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>flowable-server</name>
+    <name>kosin-flowable</name>
 
     <description>flowable-server</description>
     <packaging>jar</packaging>
@@ -107,7 +107,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>kosin-flowable-server</finalName>
+        <finalName>kosin-flowable</finalName>
     </build>
 
 </project>

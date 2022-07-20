@@ -1,5 +1,8 @@
 spring:
   cloud:
+    sentinel:
+      transport:
+        dashboard: 49.232.16.153:8880
     nacos:
       config:
         # 服务器地址
@@ -8,14 +11,10 @@ spring:
         namespace: dev
         # Group
         group: DEFAULT_GROUP
-        # Data Id 前缀
-#        prefix: ${spring.application.name}
-        # Data Id 后缀
-#        file-extension: yaml
         # 共享配置文件，多个配置文件 [,] 隔开
-#        shared-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
-        # 刷新是使用
-#        refreshable-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
+        # shared-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
+        # 开启自动刷新的配置文件
+        # refreshable-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
         ext-config[0]:
           data-id: ${spring.application.name}-dev.yaml
           refresh: true

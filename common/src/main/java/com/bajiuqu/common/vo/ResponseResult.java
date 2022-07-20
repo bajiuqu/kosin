@@ -5,6 +5,11 @@ import cn.hutool.http.HttpStatus;
 import com.bajiuqu.common.constant.ResponseMessageConstant;
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.validation.ObjectError;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author ruimi
@@ -129,6 +134,34 @@ public class ResponseResult {
     public static ResponseResult duplicate() {
         return new ResponseResult(StatusEnum.ERROR, HttpStatus.HTTP_BAD_METHOD
                 , ResponseMessageConstant.MSG_DENY_DUPLICATE, "");
+    }
+
+    /**
+     * 修改,插入  数据校验
+     *
+     * @return
+     */
+    public static ResponseResult validateFail(List<ObjectError> errorList) {
+        List<String> list = new ArrayList<>();
+        for (ObjectError objectError : errorList) {
+            list.add(objectError.getDefaultMessage());
+        }
+        return new ResponseResult(StatusEnum.ERROR, 412
+                , StringUtils.join(list, "; "), "");
+    }
+
+    /**
+     * 修改,插入  数据校验
+     *
+     * @return
+     */
+    public static ResponseResult validateFail(List<ObjectError> errorList, String separate) {
+        List<String> list = new ArrayList<>();
+        for (ObjectError objectError : errorList) {
+            list.add(objectError.getDefaultMessage());
+        }
+        return new ResponseResult(StatusEnum.ERROR, 412
+                , StringUtils.join(list, separate), "");
     }
 
     /**
