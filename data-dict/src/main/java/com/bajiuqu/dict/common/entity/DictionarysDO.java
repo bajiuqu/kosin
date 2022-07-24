@@ -1,5 +1,6 @@
-package com.bajiuqu.dict.entity;
+package com.bajiuqu.dict.common.entity;
 
+import com.bajiuqu.common.entity.BaseDO;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -14,56 +15,54 @@ import java.util.Date;
  */
 @Data
 @Entity
-@Table(name = "SYS_DICTIONARY")
-public class DictionarysDO implements Serializable {
+@Table(name = "sys_dictionary")
+public class DictionarysDO extends BaseDO {
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "DICT_CODE")
+    @Column(name = "dict_code")
     private String dictCode;
 
-    @Column(name = "DICT_NAME")
+    @Column(name = "dict_name")
     private String dictName;
 
-    @Column(name = "PDICT_CODE")
+    @Column(name = "pdict_code")
     private String pdictCode;
 
-    @Column(name = "GROUP_ID")
+    @Column(name = "group_id")
     private String groupId;
 
-    @Column(name = "REMARK")
+    @Column(name = "remark")
     private String remark;
 
-    @Column(name = "CREATE_BY")
+    @Column(name = "create_by")
     private String createBy;
 
-    @Column(name = "CREATE_TIME")
+    @Column(name = "create_time")
     private Date createTime;
 
-    @Column(name = "UPDATE_BY")
+    @Column(name = "update_by")
     private String updateBy;
 
-    @Column(name = "UPDATE_TIME")
+    @Column(name = "update_time")
     private Date updateTime;
 
-    @Column(name = "DELETE_BY")
+    @Column(name = "delete_by")
     private String deleteBy;
 
-    @Column(name = "DELETE_TIME")
+    @Column(name = "delete_time")
     private Date deleteTime;
 
-    @Column(name = "ORG_ID")
+    @Column(name = "org_id")
     private String orgId;
 
-    @Column(name = "DEPT_ID")
+    @Column(name = "dept_id")
     private String deptId;
 
-    @Column(name = "ORDER_BY")
+    @Column(name = "order_by")
     private Integer orderBy;
 
-    @Column(name = "IDSTR")
-    private String idstr;
 
 }

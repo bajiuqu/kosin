@@ -1,4 +1,4 @@
-package com.bajiuqu.dict.constant;
+package com.bajiuqu.dict.common.constant;
 
 public class RedisConstant {
 

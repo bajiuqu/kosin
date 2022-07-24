@@ -2,14 +2,11 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 49.232.16.153:8880
+        dashboard: 39.105.132.152:8889
     nacos:
       config:
-        # 服务器地址
-        server-addr: nacos-server.axuu.cn
-        # 命名空间
+        server-addr: 39.105.132.152:8888
         namespace: dev
-        # Group
         group: DEFAULT_GROUP
         # 共享配置文件，多个配置文件 [,] 隔开
         # shared-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
@@ -23,7 +20,7 @@ spring:
           refresh: true
       discovery:
         # 服务器地址
-        server-addr: nacos-server.axuu.cn
+        server-addr: 39.105.132.152:8888
         # 命名空间
         namespace: dev
         metadata:

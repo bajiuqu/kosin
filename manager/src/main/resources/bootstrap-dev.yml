@@ -5,8 +5,7 @@ spring:
         dashboard: 49.232.16.153:8880
     nacos:
       config:
-        # server-addr: nacos-server.axuu.cn
-        server-addr: 49.232.16.153:8848
+        server-addr: nacos-server.axuu.cn
         ext-config[0]:
           data-id: ${spring.application.name}-dev.yaml
           refresh: true
@@ -20,8 +19,7 @@ spring:
         file-extension: yaml
 
       discovery:
-        # server-addr: nacos-server.axuu.cn
-        server-addr: 49.232.16.153:8848
+        server-addr: nacos-server.axuu.cn
         namespace: dev
         metadata:
           version: v1

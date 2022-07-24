@@ -1,6 +1,6 @@
 package dto;
 
-import com.bajiuqu.common.entity.base.BaseDO;
+import com.bajiuqu.common.entity.BaseDO;
 import com.bajiuqu.common.validated.ValidatedGroup;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;

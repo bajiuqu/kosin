@@ -2,11 +2,10 @@ spring:
   cloud:
     sentinel:
       transport:
-        dashboard: 49.232.16.153:8880
+        dashboard: 39.105.132.152:8889
     nacos:
       config:
-        # server-addr: nacos-server.axuu.cn
-        server-addr: 49.232.16.153:8848
+        server-addr: 39.105.132.152:8888
         namespace: dev
         group: DEFAULT_GROUP
         file-extension: yaml
@@ -19,8 +18,18 @@ spring:
           data-id: redis-dev.yaml
           refresh: true
       discovery:
-        # server-addr: nacos-server.axuu.cn
-        server-addr: 49.232.16.153:8848
+        server-addr: 39.105.132.152:8888
         namespace: dev
         metadata:
           version: v1
+
+elasticsearch:
+  schema: http
+  address: 49.232.16.153:9200
+  connecttimeout: 5000
+  sockettimeout: 5000
+  connectionrequesttimeout: 5000
+  maxconnecttotal: 100
+  maxconnectperroute: 100
+  username: elastic
+  password: nanxihansheng34
