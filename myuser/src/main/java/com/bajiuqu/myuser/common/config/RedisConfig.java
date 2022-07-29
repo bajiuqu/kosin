@@ -3,7 +3,11 @@ package com.bajiuqu.myuser.common.config;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -20,10 +24,11 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @author 王瑞敏
  * @date 2022-07-20
  */
+@Slf4j
 @Configuration
 public class RedisConfig {
 
-    @Value("${spring.redis.database}")
+    @Value(value = "${spring.redis.database}")
     private int database;
 
     /**
@@ -47,6 +52,7 @@ public class RedisConfig {
     @Bean
     public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory factory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();
+        log.warn("Redis DataBase: {}", database);
         // 配置连接工厂
         factory.setDatabase(database);
         template.setConnectionFactory(factory);

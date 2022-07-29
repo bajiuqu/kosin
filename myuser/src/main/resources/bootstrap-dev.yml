@@ -5,31 +5,14 @@ spring:
         dashboard: 39.105.132.152:8889
     nacos:
       config:
-        server-addr: 39.105.132.152:8888
+        server-addr: 39.105.132.152:5656
         namespace: dev
         group: DEFAULT_GROUP
         file-extension: yaml
-        # shared-dataids: ${spring.application.name}-dev.yaml,redis-dev.yaml
-        # refreshable-dataids: ${spring.application.name}-dev.yaml,redis-dev.yaml
-        ext-config[0]:
-          data-id: ${spring.application.name}-dev.yaml
-          refresh: true
-        ext-config[1]:
-          data-id: redis-dev.yaml
-          refresh: true
+        shared-dataids: redis-dev.yaml,${spring.application.name}-dev.yaml
       discovery:
-        server-addr: 39.105.132.152:8888
+        server-addr: 39.105.132.152:5656
         namespace: dev
         metadata:
           version: v1
 
-elasticsearch:
-  schema: http
-  address: 49.232.16.153:9200
-  connecttimeout: 5000
-  sockettimeout: 5000
-  connectionrequesttimeout: 5000
-  maxconnecttotal: 100
-  maxconnectperroute: 100
-  username: elastic
-  password: nanxihansheng34

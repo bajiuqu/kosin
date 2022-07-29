@@ -1,5 +1,6 @@
 package com.bajiuqu.myuser.common.vo;
 
+import com.alibaba.fastjson2.annotation.JSONField;
 import com.bajiuqu.common.vo.BaseVO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -16,6 +17,7 @@ import java.util.Date;
 @ToString
 public class UserVO extends BaseVO {
 
+    // @JSONField(serializeUsing = IdCodec.class, deserializeUsing = IdCodec.class)
     @ApiModelProperty(value = "用户主键", notes = "用户主键")
     private Long userCode;
 

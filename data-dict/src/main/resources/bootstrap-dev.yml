@@ -9,15 +9,15 @@ spring:
         namespace: dev
         group: DEFAULT_GROUP
         # 共享配置文件，多个配置文件 [,] 隔开
-        # shared-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
+        shared-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
         # 开启自动刷新的配置文件
-        # refreshable-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
-        ext-config[0]:
-          data-id: ${spring.application.name}-dev.yaml
-          refresh: true
-        ext-config[1]:
-          data-id: redis-dev.yaml
-          refresh: true
+        refreshable-dataids: ${spring.application.name}-dev.yaml, redis-dev.yaml
+        # ext-config[0]:
+        #  data-id: ${spring.application.name}-dev.yaml
+        #  refresh: true
+        # ext-config[1]:
+        #  data-id: redis-dev.yaml
+        #  refresh: true
       discovery:
         # 服务器地址
         server-addr: 39.105.132.152:8888

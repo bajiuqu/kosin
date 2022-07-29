@@ -3,10 +3,21 @@ server:
 
 spring:
   profiles:
-    active: dev
+    active: test
   application:
     name: myuser
 
 logging:
   config: classpath:config/log/logback-spring.xml
+
+elasticsearch:
+  schema: http
+  address: 49.232.16.153:9200
+  connecttimeout: 5000
+  sockettimeout: 5000
+  connectionrequesttimeout: 5000
+  maxconnecttotal: 100
+  maxconnectperroute: 100
+  username: elastic
+  password: nanxihansheng34
 

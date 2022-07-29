@@ -24,23 +24,31 @@
         <hutool.version>5.3.7</hutool.version>
         <guava.version>30.1.1-jre</guava.version>
         <devtools.version>2.3.6.RELEASE</devtools.version>
+        <!-- spring boot 相关 -->
         <spring.boot.starter.version>2.3.6.RELEASE</spring.boot.starter.version>
-        <starter.web.version>2.3.6.RELEASE</starter.web.version>
-        <spring-boot-data-jpa>2.3.6.RELEASE</spring-boot-data-jpa>
+        <spring.boot.starter.web.version>2.3.6.RELEASE</spring.boot.starter.web.version>
         <spring-boot-data-redis>2.3.6.RELEASE</spring-boot-data-redis>
+        <spring-boot-data-jpa>2.3.6.RELEASE</spring-boot-data-jpa>
+        <!-- hibernate -->
+        <hibernate-core.version>5.3.7.Final</hibernate-core.version>
+        <validator.version>6.0.13.Final</validator.version>
+
         <mysql.connector.java.version>8.0.18</mysql.connector.java.version>
         <mybatis.version>2.1.0</mybatis.version>
         <druid.version>1.2.8</druid.version>
         <lombok.version>1.18.2</lombok.version>
         <pagehelper.version>1.4.1</pagehelper.version>
+        <!-- 微服务相关 -->
         <nacos.config.version>2.1.0.RELEASE</nacos.config.version>
         <nacos.discovery.version>2.1.0.RELEASE</nacos.discovery.version>
-        <openfeign.version>2.1.0.RELEASE</openfeign.version>
-        <archaius-core.version>0.7.6</archaius-core.version>
-        <feign-httpclient>10.1.0</feign-httpclient>
         <sentinel.version>2.1.0.RELEASE</sentinel.version>
+        <openfeign.version>2.1.0.RELEASE</openfeign.version>
         <gateway.version>2.1.0.RELEASE</gateway.version>
-        <nacos.client>1.2.0</nacos.client>
+        <nacos.client>1.4.1</nacos.client>
+        <feign-httpclient>10.1.0</feign-httpclient>
+        <spring-cloud-starter-bootstrap.version>3.1.0</spring-cloud-starter-bootstrap.version>
+
+        <archaius-core.version>0.7.6</archaius-core.version>
         <swagger.ui.version>2.8.0</swagger.ui.version>
         <swagger2.version>2.8.0</swagger2.version>
         <slf4j.version>1.7.30</slf4j.version>
@@ -48,16 +56,15 @@
         <jackson.version>2.11.3</jackson.version>
         <tk.mybatis.version>2.1.5</tk.mybatis.version>
         <flowable.version>6.4.1</flowable.version>
-        <validator.version>6.0.13.Final</validator.version>
-        <hibernate-core.version>5.3.7.Final</hibernate-core.version>
+
         <commons-pool2.version>2.6.2</commons-pool2.version>
         <commons-lang3.version>3.7</commons-lang3.version>
         <elasticsearch.version>7.8.0</elasticsearch.version>
         <spring-boot-data-elasticsearch.version>2.4.0</spring-boot-data-elasticsearch.version>
         <!-- elasticsearch 7.9.3 -->
         <spring-data-elasticsearch.version>4.1.0</spring-data-elasticsearch.version>
-        <!-- elasticsearch 7.6.2 -->
-        <!--<spring-data-elasticsearch.version>4.0.9.RELEASE</spring-data-elasticsearch.version>-->
+
+        <java-jwt.version>3.2.0</java-jwt.version>
     </properties>
 
     <!-- 每次添加新模块要注意添加module -->
@@ -82,7 +89,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${starter.web.version}</version>
+                <version>${spring.boot.starter.web.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -241,6 +248,12 @@
                 <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
                 <version>${sentinel.version}</version>
             </dependency>
+            <!-- nacos 2021.1 需要 -->
+            <!--            <dependency>
+                            <groupId>org.springframework.cloud</groupId>
+                            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+                            <version>${spring-cloud-starter-bootstrap.version}</version>
+                        </dependency>-->
             <!-- gateway 网关 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -371,6 +384,11 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-elasticsearch</artifactId>
                 <version>${spring-data-elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
             </dependency>
 
         </dependencies>
